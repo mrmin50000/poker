@@ -1,6 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+void play_with_bot(){
+    
+}
+
+void play_with_bro(){
+
+}
+
 
 int main(){
+
+    int action = 0;
+
+    //suits of cards
+
     char hearts[][169] = {
         "┌─────────┐\n│A       ♥│\n│         │\n│    ♥    │\n│         │\n│♥       A│\n└─────────┘\n",
         "┌─────────┐\n│2       ♥│\n│         │\n│  ♥   ♥  │\n│         │\n│♥       2│\n└─────────┘\n",
@@ -64,7 +79,26 @@ int main(){
         "┌─────────┐\n│Q       ♠│\n│         │\n│    ♠    │\n│         │\n│♠       Q│\n└─────────┘\n",
         "┌─────────┐\n│K       ♠│\n│    ♠    │\n│  ♠ ♠ ♠  │\n│    ♠    │\n│♠       K│\n└─────────┘\n"
     };
-    for (int i = 0;i < 12;i++)
-        printf(diamonds[i]);
+
+    //CLI
+    printf("1 - play with bot\n2 - play with bro\n3 - exit\n");
+
+    for(;;){
+        scanf("%d", &action);
+        switch (action){
+            case 1:
+                play_with_bot();
+                break;
+            case 2:
+                play_with_bro();
+                break;
+            case 3:
+                return 0;
+                break;
+            default:
+                printf("Wrong\n1 - play with bot\n2 - play with bro\n3 - exit\n"); 
+        }
+    }
+
     return 0;
 }
